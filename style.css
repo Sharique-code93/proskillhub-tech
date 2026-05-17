@@ -522,4 +522,37 @@ header, main, footer, .site-header, .site-footer {
   
 }
 
+/* Logo image styles — add at the end of your stylesheet */
+.logo-link {
+  display: inline-block;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* Keep original .logo rule intact; this new class only affects the image */
+.site-logo {
+  display: block;
+  width: 220px;      /* default desktop width — adjust if needed */
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+/* Responsive sizes (only these new rules; nothing else changed) */
+@media (max-width: 768px) {
+  .site-logo { width: 160px; }
+}
+
+@media (max-width: 420px) {
+  .site-logo { width: 140px; }
+}
+
+/* Ensure the mobile nav toggle still aligns correctly */
+.header-inner .logo-link { margin-right: 8px; }
+
+
+
+
+
 
