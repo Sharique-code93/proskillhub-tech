@@ -629,6 +629,76 @@ header, .site-header { z-index: 999; }
   outline-offset: 3px;
 }
 
+/* Header baseline (64px total) */
+header { height: 64px; }
+.header-inner { height: 64px; align-items: center; padding: 0 18px; }
+
+/* Logo container */
+.logo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* Emblem size tuned for 64px header */
+.logo-emblem {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%);
+  color:#fff;
+  font-weight:800;
+  font-size:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 22px rgba(37,99,235,0.12);
+  flex-shrink:0;
+}
+
+/* Brand words stacked for compactness */
+.logo-words { display:flex; flex-direction:row; gap:6px; align-items:baseline; }
+
+/* Typography */
+.brand-main { font-weight:800; font-size:18px; color:#0f172a; }
+.brand-accent {
+  font-weight:800; font-size:18px;
+  background:linear-gradient(90deg,#ff6b00 0%,#ff8a4b 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* Tagline (small) */
+.logo-tag { font-size:11px; color:#64748b; font-weight:600; margin-left:10px; letter-spacing:0.6px; text-transform:uppercase; }
+
+/* Nav balance */
+nav ul { gap:20px; }
+nav a { padding:8px 6px; font-size:15px; }
+
+/* Mobile adjustments */
+@media (max-width:768px) {
+  header, .header-inner { height:56px; padding:0 12px; }
+  .logo-emblem { width:44px; height:44px; font-size:15px; }
+  .brand-main, .brand-accent { font-size:16px; }
+  .logo-tag { display:none; }
+}
+
+/* Very small screens */
+@media (max-width:420px) {
+  header, .header-inner { height:52px; padding:0 10px; }
+  .logo-emblem { width:40px; height:40px; }
+  .brand-main, .brand-accent { font-size:15px; }
+}
+
+/* Accessibility focus */
+.logo-text:focus-visible { outline:3px solid rgba(30,58,138,0.12); outline-offset:4px; border-radius:8px; }
+
+/* Hide old text logo if still present */
+.logo { display:none !important; }
+
 
 
 
