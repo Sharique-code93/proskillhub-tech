@@ -551,6 +551,85 @@ header, main, footer, .site-header, .site-footer {
 /* Ensure the mobile nav toggle still aligns correctly */
 .header-inner .logo-link { margin-right: 8px; }
 
+/* ===== Logo and header polish (add at end of style.css) ===== */
+
+/* Ensure header items align perfectly */
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0; /* slightly tighter than original for a compact professional look */
+}
+
+/* Logo container */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  line-height: 1;
+  margin-right: 8px;
+}
+
+/* Logo image sizing and crispness */
+.site-logo {
+  display: block;
+  height: 48px;           /* fixed visual height to match header */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: transform .18s ease;
+}
+
+/* Slight hover lift for polish */
+.logo-link:hover .site-logo { transform: translateY(-2px); }
+
+/* Keep text logo hidden if still present in DOM */
+.logo { display: none !important; }
+
+/* Navigation spacing and visual balance */
+nav ul { gap: 18px; }
+nav a { padding: 8px 6px; font-size: 15px; }
+
+/* Make sure hamburger and nav align nicely */
+.nav-toggle {
+  display: none; /* default hidden on desktop; your existing responsive rules will show it */
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  margin-left: 8px;
+  align-self: center;
+}
+
+/* On mobile ensure logo and toggle sit on same row and look balanced */
+@media (max-width: 768px) {
+  .site-logo { height: 44px; }
+  .header-inner { padding: 10px 12px; }
+  .logo-link { margin-right: 6px; }
+  .nav-toggle { display: block; order: 2; } /* keep toggle visible and after logo */
+  .logo-link { order: 1; }
+  nav { order: 3; }
+  nav ul { gap: 14px; }
+}
+
+/* Small screens */
+@media (max-width: 420px) {
+  .site-logo { height: 40px; }
+  nav a { font-size: 14px; padding: 8px 4px; }
+}
+
+/* Ensure header z-index and spacing remain intact */
+header, .site-header { z-index: 999; }
+
+/* Optional: force visible focus outline for accessibility */
+.logo-link:focus-visible, .nav-toggle:focus-visible, nav a:focus-visible {
+  outline: 3px solid rgba(30,58,138,0.12);
+  outline-offset: 3px;
+}
+
+
 
 
 
