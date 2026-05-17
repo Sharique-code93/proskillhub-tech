@@ -385,3 +385,36 @@ if (isReducedMotion) {
   };
 })();
 
+
+/* =========================
+   FORM SUBMIT REDIRECT FIX
+   ========================= */
+(function initFormSubmit() {
+  const form = document.getElementById("myForm");
+  if (!form) return; // safety check
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = "https://sharique-code93.github.io/proskillhub-tech/thankyou.html";
+      } else {
+        alert("❌ Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("⚠️ Network error. Please try again.");
+    }
+  });
+})();
+
