@@ -255,28 +255,53 @@
           </div>
         </div>
 
-        <aside class="register-form fade-up">
-         <form action="https://formspree.io/f/mjgzblee" method="POST">
-            <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
-            <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
-            <input type="tel" name="phone" placeholder="Mobile Number" required autocomplete="tel">
+       <aside class="register-form fade-up">
+  <form id="myForm" action="https://formspree.io/f/mjgzblee" method="POST">
 
-            <select name="experience" required>
-              <option value="">Experience Level</option>
-              <option>Fresher</option>
-              <option>0-2 Years</option>
-              <option>2-5 Years</option>
-              <option>5+ Years</option>
-            </select>
+    <h3 class="form-title">Register Now 🚀</h3>
 
-            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
+      <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+    </div>
 
-            <button type="submit" class="btn primary">Submit Registration</button>
+    <div class="form-row">
+      <input type="tel" name="phone" placeholder="Mobile Number" required autocomplete="tel">
+      <select name="experience" required>
+        <option value="">Experience Level</option>
+        <option>Fresher</option>
+        <option>0-2 Years</option>
+        <option>2-5 Years</option>
+        <option>5+ Years</option>
+      </select>
+    </div>
 
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_redirect" value="https://sharique-code93.github.io/proskillhub-tech/thankyou.html">
-          </form>
-        </aside>
+    <!-- ✅ NEW EDUCATION SECTION -->
+    <div class="form-row">
+      <select name="education" required>
+        <option value="">Select Education</option>
+        <option>B.Tech / B.E</option>
+        <option>B.Sc</option>
+        <option>BCA</option>
+        <option>M.Tech</option>
+        <option>MCA</option>
+        <option>MBA</option>
+        <option>Diploma</option>
+        <option>Other</option>
+      </select>
+
+      <input type="text" name="college" placeholder="College / University">
+    </div>
+
+    <textarea name="message" rows="4" placeholder="Your Message (Optional)"></textarea>
+
+    <button type="submit" class="btn primary">Submit Registration</button>
+
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_redirect" value="https://sharique-code93.github.io/proskillhub-tech/thankyou.html">
+
+  </form>
+</aside>
       </div>
     </section>
   </main>
