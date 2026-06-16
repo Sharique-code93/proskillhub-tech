@@ -255,56 +255,81 @@
           </div>
         </div>
 
-       <aside class="register-form fade-up">
-  <form id="myForm" action="https://formspree.io/f/mjgzblee" method="POST">
+       <section class="form-section">
 
-    <h3 class="form-title">Register Now 🚀</h3>
+  <div class="form-card">
 
-    <div class="form-row">
-      <input type="text" name="name" placeholder="Full Name" required autocomplete="name">
-      <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
-    </div>
+    <h2 class="form-title">Register Now 🚀</h2>
 
-    <div class="form-row">
-      <input type="tel" name="phone" placeholder="Mobile Number" required autocomplete="tel">
-      <select name="experience" required>
-        <option value="">Experience Level</option>
-        <option>Fresher</option>
-        <option>0-2 Years</option>
-        <option>2-5 Years</option>
-        <option>5+ Years</option>
-      </select>
-    </div>
+    <form id="myForm" action="https://formspree.io/f/mjgzblee" method="POST">
 
-    <!-- ✅ NEW EDUCATION SECTION -->
-    <div class="form-row">
-      <select name="education" required>
-        <option value="">Select Education</option>
-        <option>B.Tech / B.E</option>
-        <option>B.Sc</option>
-        <option>BCA</option>
-        <option>M.Tech</option>
-        <option>MCA</option>
-        <option>MBA</option>
-        <option>Diploma</option>
-        <option>Student</option>
-        <option>Other</option>
-      </select>
+      <div class="form-row">
 
-      <input type="text" name="college" placeholder="College / University">
-    </div>
+        <div class="input-group">
+          <span>👤</span>
+          <input type="text" name="name" placeholder="Full Name" required>
+        </div>
 
-    <textarea name="message" rows="4" placeholder="Your Message (Optional)"></textarea>
+        <div class="input-group">
+          <span>📧</span>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
 
-    <button type="submit" class="btn primary">Submit Registration</button>
-
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_redirect" value="https://sharique-code93.github.io/proskillhub-tech/thankyou.html">
-
-  </form>
-</aside>
       </div>
-    </section>
+
+      <div class="form-row">
+
+        <div class="input-group">
+          <span>📞</span>
+          <input type="tel" name="phone" placeholder="Mobile Number" required>
+        </div>
+
+        <div class="input-group">
+          <span>🏫</span>
+          <input type="text" name="college" placeholder="College / University">
+        </div>
+
+      </div>
+
+      <div class="form-row">
+
+        <div class="input-group">
+          <span>🎓</span>
+          <select name="education" required>
+            <option value="">Select Education</option>
+            <option>B.Tech / B.E</option>
+            <option>B.Sc</option>
+            <option>BCA</option>
+            <option>M.Tech</option>
+            <option>MCA</option>
+            <option>MBA</option>
+            <option>Diploma</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- EMPTY DIV TO KEEP GRID BALANCE -->
+        <div></div>
+
+      </div>
+
+      <div class="input-group full">
+        <span>💬</span>
+        <textarea name="message" placeholder="Your Message (Optional)"></textarea>
+      </div>
+
+      <!-- CENTER BUTTON -->
+      <div class="btn-center">
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </div>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_redirect" value="thankyou.html">
+
+    </form>
+  </div>
+
+</section>
   </main>
 
   <!-- Footer -->
