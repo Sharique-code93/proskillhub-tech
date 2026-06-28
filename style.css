@@ -779,3 +779,49 @@ nav a { padding:8px 6px; font-size:15px; }
 
 
 
+
+
+/* ===== Premium Redesign Patch ===== */
+.highlight{color:#ff8a00;}
+
+body{
+background:
+radial-gradient(circle at top left,#2563eb 0%,transparent 30%),
+radial-gradient(circle at bottom right,#1d4ed8 0%,transparent 30%),
+linear-gradient(135deg,#020617,#0f172a,#1e3a8a)!important;
+color:#fff;
+}
+
+.hero{
+gap:50px;
+padding:70px 50px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+border-radius:35px;
+}
+
+.hero-right img{
+max-width:620px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 0 40px rgba(37,99,235,.4),0 0 80px rgba(37,99,235,.2);
+animation:floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+0%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+100%{transform:translateY(0)}
+}
+
+.stat-box,.course-card,.benefit-card,.event-card,.form-card{
+background:rgba(255,255,255,.08)!important;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+}
+
+@media(max-width:768px){
+.hero{flex-direction:column;padding:30px 20px;text-align:center;}
+.hero-right img{max-width:100%;}
+}
